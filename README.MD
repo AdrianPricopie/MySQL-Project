@@ -1,7 +1,8 @@
 # Social Media Project
 
 Acest proiect reprezintă o aplicație simplă de social media cu funcționalități de adăugare de utilizatori, postări, comentarii, aprecieri și urmăritori.
-
+A fost dezvoltat folosind MySQL Workbench și include operațiile CRUD pentru gestionarea datelor. S-au aplicat metode de adăugare (CREATE), citire (READ), actualizare (UPDATE) și ștergere (DELETE) pentru entitățile principale, precum Users, Posts, Comments, Likes și Followers.
+[SqlFile](https://github.com/legendadr/MySQL-Project/blob/main/MySqlProjectFile.sql)
 ## Structura Bazei de Date
 
 ### Tabele
