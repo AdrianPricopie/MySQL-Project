@@ -3,7 +3,7 @@
 
 This project represents a simple social media application with functionalities for adding users, posts, comments, likes, and followers. It was developed using MySQL Workbench and includes CRUD operations for data management. Methods for Create (CREATE), Read (READ), Update (UPDATE), and Delete (DELETE) have been applied to the main entities such as Users, Posts, Comments, Likes, and Followers.
 
-[SqlFile](https://github.com/legendadr/MySQL-Project/blob/main/MySqlProjectFile.sql)
+Here you can see the code [SqlFile](https://github.com/legendadr/MySQL-Project/blob/main/MySqlProjectFile.sql)
 
 ## Database Structure
 
