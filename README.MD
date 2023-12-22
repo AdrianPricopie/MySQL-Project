@@ -43,6 +43,19 @@ Proiectul include comenzi SQL de creare a bazelor de date, tabelelor și exemple
 
 ### Exemplu de Utilizare
 
+# Clonați proiectul
+ git clone https://github.com/username/social-media-project.git
+
+# Deschideți fișierul SQL în MySQL Workbench și executați comenzile pentru a crea baza de date și tabelele.
+
+# Adăugați date de exemplu folosind comenzile de inserare (INSERT) pentru a popula tabelele.
+
+# Realizați interogări folosind limbajul SQL pentru a obține informații despre utilizatori, postări, comentarii, etc.
+
+
+
+
+
 1. Clonați proiectul:
 
    ```bash
