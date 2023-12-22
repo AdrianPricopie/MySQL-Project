@@ -6,6 +6,8 @@ Acest proiect reprezintă o aplicație simplă de social media cu funcționalit�
 
 ### Tabele
 
+  ![Daily report](https://github.com/legendadr/MySQL-Project/blob/main/designBazaDeDateSocialMedia.png)
+
 1. **Users:**
    - `UserID` (cheie primară, auto-incrementare)
    - `Username` (nume de utilizator)
