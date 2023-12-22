@@ -1,53 +1,54 @@
+
 # Social Media Project
 
-Acest proiect reprezintă o aplicație simplă de social media cu funcționalități de adăugare de utilizatori, postări, comentarii, aprecieri și urmăritori. A fost dezvoltat folosind MySQL Workbench și include operațiile CRUD pentru gestionarea datelor. S-au aplicat metode de adăugare (CREATE), citire (READ), actualizare (UPDATE) și ștergere (DELETE) pentru entitățile principale, precum Users, Posts, Comments, Likes și Followers.
+This project represents a simple social media application with functionalities for adding users, posts, comments, likes, and followers. It was developed using MySQL Workbench and includes CRUD operations for data management. Methods for Create (CREATE), Read (READ), Update (UPDATE), and Delete (DELETE) have been applied to the main entities such as Users, Posts, Comments, Likes, and Followers.
 
 [SqlFile](https://github.com/legendadr/MySQL-Project/blob/main/MySqlProjectFile.sql)
 
-## Structura Bazei de Date
+## Database Structure
 
-### Tabele
+### Tables
 
-![Structura Bazei de Date](https://github.com/legendadr/MySQL-Project/blob/main/designBazaDeDateSocialMedia.png)
+![Database Structure](https://github.com/legendadr/MySQL-Project/blob/main/designBazaDeDateSocialMedia.png)
 
 1. **Users:**
-   - `UserID` (cheie primară, auto-incrementare)
-   - `Username` (nume de utilizator)
-   - `Email` (adresă de email)
-   - `PasswordUser` (parolă)
-   - `DateOfBirth` (dată de naștere)
+   - `UserID` (primary key, auto-increment)
+   - `Username` (username)
+   - `Email` (email address)
+   - `PasswordUser` (password)
+   - `DateOfBirth` (date of birth)
 
 2. **Posts:**
-   - `PostID` (cheie primară, auto-incrementare)
-   - `UserID` (cheie externă către Users)
-   - `TextOfPosts` (textul postării)
-   - `PostDate` (dată postare)
+   - `PostID` (primary key, auto-increment)
+   - `UserID` (foreign key referencing Users)
+   - `TextOfPosts` (post text)
+   - `PostDate` (post date)
 
 3. **Comments:**
-   - `CommentID` (cheie primară, auto-incrementare)
-   - `PostID` (cheie externă către Posts)
-   - `UserID` (cheie externă către Users)
-   - `CommentText` (textul comentariului)
-   - `CommentDate` (dată comentariu)
+   - `CommentID` (primary key, auto-increment)
+   - `PostID` (foreign key referencing Posts)
+   - `UserID` (foreign key referencing Users)
+   - `CommentText` (comment text)
+   - `CommentDate` (comment date)
 
 4. **Likes:**
-   - `LikeID` (cheie primară, auto-incrementare)
-   - `PostID` (cheie externă către Posts)
-   - `UserID` (cheie externă către Users)
-   - `LikeCount` (numărul de aprecieri, cu valoare implicită 1)
+   - `LikeID` (primary key, auto-increment)
+   - `PostID` (foreign key referencing Posts)
+   - `UserID` (foreign key referencing Users)
+   - `LikeCount` (number of likes, default value 1)
 
 5. **Followers:**
-   - `FollowerID` (cheie primară, auto-incrementare)
-   - `UserID` (cheie externă către Users)
-   - `FollowerUserID` (cheie externă către Users)
+   - `FollowerID` (primary key, auto-increment)
+   - `UserID` (foreign key referencing Users)
+   - `FollowerUserID` (foreign key referencing Users)
 
-## Comenzi SQL Exemplificative
+## SQL Example Commands
 
-Proiectul include comenzi SQL de creare a bazelor de date, tabelelor și exemple de adăugare de date.
+The project includes SQL commands for creating databases, tables, and examples of data insertion.
 
-### Exemplu de Utilizare
+### Usage Example
 
-1. Clonați proiectul:
+1. Clone the project:
 
    ```bash
    git clone https://github.com/username/social-media-project.git
