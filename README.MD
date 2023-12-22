@@ -1,13 +1,14 @@
 # Social Media Project
 
-Acest proiect reprezintă o aplicație simplă de social media cu funcționalități de adăugare de utilizatori, postări, comentarii, aprecieri și urmăritori.
-A fost dezvoltat folosind MySQL Workbench și include operațiile CRUD pentru gestionarea datelor. S-au aplicat metode de adăugare (CREATE), citire (READ), actualizare (UPDATE) și ștergere (DELETE) pentru entitățile principale, precum Users, Posts, Comments, Likes și Followers.
+Acest proiect reprezintă o aplicație simplă de social media cu funcționalități de adăugare de utilizatori, postări, comentarii, aprecieri și urmăritori. A fost dezvoltat folosind MySQL Workbench și include operațiile CRUD pentru gestionarea datelor. S-au aplicat metode de adăugare (CREATE), citire (READ), actualizare (UPDATE) și ștergere (DELETE) pentru entitățile principale, precum Users, Posts, Comments, Likes și Followers.
+
 [SqlFile](https://github.com/legendadr/MySQL-Project/blob/main/MySqlProjectFile.sql)
+
 ## Structura Bazei de Date
 
 ### Tabele
 
-  ![Daily report](https://github.com/legendadr/MySQL-Project/blob/main/designBazaDeDateSocialMedia.png)
+![Structura Bazei de Date](https://github.com/legendadr/MySQL-Project/blob/main/designBazaDeDateSocialMedia.png)
 
 1. **Users:**
    - `UserID` (cheie primară, auto-incrementare)
@@ -46,14 +47,8 @@ Proiectul include comenzi SQL de creare a bazelor de date, tabelelor și exemple
 
 ### Exemplu de Utilizare
 
-
 1. Clonați proiectul:
 
    ```bash
    git clone https://github.com/username/social-media-project.git
 
-2. Deschideți fișierul SQL în MySQL Workbench și executați comenzile pentru a crea baza de date și tabelele.
-
-3. Adăugați date de exemplu folosind comenzile de inserare (INSERT) pentru a popula tabelele.
-
-4. Realizați interogări folosind limbajul SQL pentru a obține informații despre utilizatori, postări, comentarii, etc.
