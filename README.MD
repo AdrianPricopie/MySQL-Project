@@ -46,10 +46,5 @@ Here you can see the code [SqlFile](https://github.com/legendadr/MySQL-Project/b
 
 The project includes SQL commands for creating databases, tables, and examples of data insertion.
 
-### Usage Example
 
-1. Clone the project:
-
-   ```bash
-   git clone https://github.com/username/social-media-project.git
 
