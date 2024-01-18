@@ -48,7 +48,7 @@ Here you can see the code [SqlFile](https://github.com/legendadr/MySQL-Project/b
    - `UserID` (foreign key referencing Users)
    - `FollowerUserID` (foreign key referencing Users)
 
-##User table data:
+## User table data:
 
 ![User data](https://github.com/legendadr/MySQL-Project/blob/main/User%20Table%20Data.png)
 
