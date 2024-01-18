@@ -48,6 +48,13 @@ Here you can see the code [SqlFile](https://github.com/legendadr/MySQL-Project/b
    - `UserID` (foreign key referencing Users)
    - `FollowerUserID` (foreign key referencing Users)
 
+##User table data:
+
+![User data](https://github.com/legendadr/MySQL-Project/blob/main/User%20Table%20Data.png)
+
+
+
+
 ## SQL Example Commands
 
 The project includes SQL commands for creating databases, tables, and examples of data insertion.
