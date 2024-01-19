@@ -52,6 +52,10 @@ Here you can see the code [SqlFile](https://github.com/legendadr/MySQL-Project/b
 
 ![User data](https://github.com/legendadr/MySQL-Project/blob/main/User%20Table%20Data.png)
 
+Each row in the table represents a user, and the columns represent different attributes or properties of a user (e.g., UserID, Username, Email, PasswordUser, DateOfBirth). This data allows simulating the behavior of the social media application and testing various functionalities. This sample data can be used for testing queries.
+
+
+
 ## Posts table data:
 
 ![User data](https://github.com/legendadr/MySQL-Project/blob/main/table%20posts.png)
