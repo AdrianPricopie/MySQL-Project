@@ -6,7 +6,7 @@ use socialmedia;
 Create table Users(
 UserID int primary key auto_increment,
 Username varchar(32) not null,
-Email varchar(255) not null,
+Email varchar(255)  unique not null,
 PasswordUser binary not null,
 PasswordByUSER INT,
 DateOfBirth date 
@@ -213,4 +213,11 @@ where UserID=7;
 #Stergem utilizatorul cu id ul 7
 delete from Users
 where UserID=7;
+
+#Selectez ultimele postari pentru fiecare utilizator
+SELECT Users.UserID, Users.Username, MAX(Posts.PostDate) AS LatestPostDate
+FROM Users
+LEFT JOIN Posts ON Users.UserID = Posts.UserID
+GROUP BY Users.UserID, Users.Username;
+
 
