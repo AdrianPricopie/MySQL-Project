@@ -9,7 +9,9 @@ You can find the code [**here**](https://github.com/legendadr/MySQL-Project/blob
 To create tables in SQL, I utilized **DDL (Data Definition Language),** a subset of SQL dedicated to defining and overseeing the structure of a database. DDL statements play a crucial role in creating, altering, and deleting database objects, including tables, indexes, and views.
 
 This is an example:
-![User data](https://github.com/legendadr/MySQL-Project/blob/main/create%20table.png)
+
+
+- ![User data](https://github.com/legendadr/MySQL-Project/blob/main/create%20table.png)
 
 
 ## Database Structure
