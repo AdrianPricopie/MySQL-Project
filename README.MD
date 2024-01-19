@@ -25,6 +25,8 @@ In the example above, I created the "users" table, which includes the following 
 
 ## Database Structure
 
+ ![DesignDataBases](https://github.com/legendadr/MySQL-Project/blob/main/designDataBases.png)
+
 ### Tables
 
 #### 1. Users
