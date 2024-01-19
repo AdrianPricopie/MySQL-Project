@@ -54,6 +54,8 @@ Here you can see the code [SqlFile](https://github.com/legendadr/MySQL-Project/b
 
 Each row in the table represents a user, and the columns represent different attributes or properties of a user (e.g., UserID, Username, Email, PasswordUser, DateOfBirth). This data allows simulating the behavior of the social media application and testing various functionalities. This sample data can be used for testing queries.
 
+For creating this table, I used  **DML - Data Manipulation Language.** From the DML subset, instructions such as INSERT, UPDATE, DELETE are part of it. With these instructions, we can insert one or more rows into a previously created table.
+
 ![User data](https://github.com/legendadr/MySQL-Project/blob/main/insert%20into%20table.png)
 
 ## Posts table data:
