@@ -3,13 +3,7 @@
 
 This project represents a simple social media application with functionalities for adding users, posts, comments, likes, and followers. It was developed using MySQL Workbench and includes CRUD operations for data management. Methods for Create (CREATE), Read (READ), Update (UPDATE), and Delete (DELETE) have been applied to the main entities such as Users, Posts, Comments, Likes, and Followers.
 
-I use: DML, or Data Manipulation Language, is another subset of SQL (Structured Query Language) that focuses on manipulating and processing data stored in a database. DML statements are used to retrieve, insert, update, and delete data within database tables. Some common DML statements include:Select,insert,update,delete.
-DQL, or Data Query Language, is a subset of SQL (Structured Query Language) that specifically focuses on the retrieval of data from a database. DQL consists primarily of the SELECT statement, which is used to query and retrieve data from one or more tables. The main purpose of DQL is to allow users to specify the data they want to retrieve and the conditions for retrieval.
-DL, or Data Definition Language, is a subset of SQL (Structured Query Language) that is used to define and manage the structure of a database. DDL statements are responsible for defining, altering, and deleting database objects such as tables, indexes, and views. Some common DDL statements include:
-
-
-
-Here you can see the code [SqlFile](https://github.com/legendadr/MySQL-Project/blob/main/MySqlProjectFile.sql)
+Here you can see the code **[SqlFile](https://github.com/legendadr/MySQL-Project/blob/main/MySqlProjectFile.sql)**
 
 ## Database Structure
 
