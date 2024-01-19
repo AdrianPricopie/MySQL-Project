@@ -27,6 +27,22 @@ In the example above, I created the "users" table, which includes the following 
 
  ![DesignDataBases](https://github.com/legendadr/MySQL-Project/blob/main/designDataBases.png)
 
+
+Table Relationships:
+
+**One-to-Many:**
+
+- Table Users (One) - Table Posts (Many): A user can have multiple posts, but each post belongs to a single user.
+- Table Users (One) - Table Comments (Many): A user can post multiple comments, but each comment is associated with a single user.
+- Table Users (One) - Table Likes (Many): A user can give multiple likes, but each like is associated with a single user.
+
+**Many-to-One:**
+
+- Table Posts (Many) - Table Users (One): Multiple posts can be associated with a single user.
+- Table Comments (Many) - Table Posts (One): Multiple comments can be associated with a single post.
+- Table Likes (Many) - Table Posts (One): Multiple likes can be associated with a single post.
+- Table Followers (Many) - Table Users (One): Multiple followers can be associated with a single user.
+
 ### Tables
 
 #### 1. Users
