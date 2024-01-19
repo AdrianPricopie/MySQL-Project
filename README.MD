@@ -52,7 +52,9 @@ Here you can see the code [SqlFile](https://github.com/legendadr/MySQL-Project/b
 
 ![User data](https://github.com/legendadr/MySQL-Project/blob/main/User%20Table%20Data.png)
 
+##Posts table data:
 
+![User data](https://github.com/legendadr/MySQL-Project/blob/main/table%20posts.png)
 
 
 ## SQL Example Commands
