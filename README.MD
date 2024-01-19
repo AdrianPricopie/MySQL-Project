@@ -11,7 +11,7 @@ To create tables in SQL, I utilized **DDL (Data Definition Language),** a subset
 This is an example:
 
 
-- ![User data](https://github.com/legendadr/MySQL-Project/blob/main/create%20table.png)
+  ![User data](https://github.com/legendadr/MySQL-Project/blob/main/create%20table.png)
 
 
 ## Database Structure
