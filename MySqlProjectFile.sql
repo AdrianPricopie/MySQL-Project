@@ -7,7 +7,7 @@ Create table Users(
 UserID int primary key auto_increment,
 Username varchar(32) not null,
 Email varchar(255)  unique not null,
-PasswordUser binary not null,
+PasswordUser varchar(32) not null,
 PasswordByUSER INT,
 DateOfBirth date 
 );
