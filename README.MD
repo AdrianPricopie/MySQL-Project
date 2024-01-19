@@ -28,7 +28,7 @@ In the example above, I created the "users" table, which includes the following 
  ![DesignDataBases](https://github.com/legendadr/MySQL-Project/blob/main/designDataBases.png)
 
 
-Table Relationships:
+### Table Relationships:
 
 **One-to-Many:**
 
