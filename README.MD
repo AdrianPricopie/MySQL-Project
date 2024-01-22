@@ -77,9 +77,9 @@ In the example above, I created the "users" table, which includes the following 
    - `FollowerUserID` (foreign key referencing Users)
 
 
-- **rimary Key**: A primary key is a column or set of columns that can serve as a unique identifier for each row in a table. It ensures that each row in the table is uniquely identified. In the 'Social Media' database, each table has an 'ID' column defined as the primary key at the time of table creation. This 'ID' is accompanied by the AUTO_INCREMENT attribute, which automatically generates a unique integer each time a new row is inserted into the table.
+**rimary Key**: A primary key is a column or set of columns that can serve as a unique identifier for each row in a table. It ensures that each row in the table is uniquely identified. In the 'Social Media' database, each table has an 'ID' column defined as the primary key at the time of table creation. This 'ID' is accompanied by the AUTO_INCREMENT attribute, which automatically generates a unique integer each time a new row is inserted into the table.
 
-- **Foreign Key**: A foreign key is a potential identifier that helps establish a connection with other tables. It always contains values that already exist as primary keys in the parent table. In the 'Social Media' database, foreign keys are utilized to establish relationships between tables, linking data based on the primary key of another table.
+**Foreign Key**: A foreign key is a potential identifier that helps establish a connection with other tables. It always contains values that already exist as primary keys in the parent table. In the 'Social Media' database, foreign keys are utilized to establish relationships between tables, linking data based on the primary key of another table.
 
 
 ## Tables Data:
