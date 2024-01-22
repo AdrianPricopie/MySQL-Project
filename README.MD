@@ -76,7 +76,8 @@ In the example above, I created the "users" table, which includes the following 
    - `UserID` (foreign key referencing Users)
    - `FollowerUserID` (foreign key referencing Users)
 
-## User Table Data:
+
+## Table Data:
 
 ![User data](https://github.com/legendadr/MySQL-Project/blob/main/User%20Table%20Data.png)
 
@@ -84,11 +85,15 @@ Each row in the table represents a user, and the columns represent different att
 
 For creating this table, I used **DML - Data Manipulation Language.** From the DML subset, instructions such as INSERT, UPDATE, DELETE are part of it. With these instructions, we can insert one or more rows into a previously created table.
 
+This is an example:
 ![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/insert%20into%20table.png)
 
-## Posts Table Data:
-
-![Posts data](https://github.com/legendadr/MySQL-Project/blob/main/table%20posts.png)
+-post table data
+![Posts table data](https://github.com/legendadr/MySQL-Project/blob/main/table%20posts.png) 
+-like table data
+![Like table data](https://github.com/legendadr/MySQL-Project/blob/main/table%20like.png) 
+-followers table data
+![Followers table data](https://github.com/legendadr/MySQL-Project/blob/main/table%20followers.png)
 
 
 
