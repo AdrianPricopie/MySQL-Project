@@ -220,4 +220,14 @@ FROM Users
 LEFT JOIN Posts ON Users.UserID = Posts.UserID
 GROUP BY Users.UserID, Users.Username;
 
+-- Adaugă încă 5 like-uri pentru postarea cu ID-ul 1
+UPDATE Likes
+SET LikeCount = LikeCount + 5
+WHERE PostID = 1;
+
+-- Afișează media like-urilor pentru toate postările
+SELECT AVG(LikeCount) AS AvgLikes
+FROM Likes;
+
+
 
