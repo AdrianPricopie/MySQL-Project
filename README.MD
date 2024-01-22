@@ -89,15 +89,15 @@ This is an example:
 
 ![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/insert%20into%20table.png)
 
- -post table data
+ - **post table data**
 
    ![Posts table data](https://github.com/legendadr/MySQL-Project/blob/main/table%20posts.png) 
 
- -like table data
+ - **like table data**
 
    ![Like table data](https://github.com/legendadr/MySQL-Project/blob/main/table%20like.png) 
 
- -followers table data
+ - **followers table data**
 
    ![Followers table data](https://github.com/legendadr/MySQL-Project/blob/main/table%20followers.png)
 
