@@ -79,6 +79,8 @@ In the example above, I created the "users" table, which includes the following 
 
 ## Tables Data:
 
+- **User table data**
+
 ![User data](https://github.com/legendadr/MySQL-Project/blob/main/User%20Table%20Data.png)
 
 Each row in the table represents a user, and the columns represent different attributes or properties of a user (e.g., UserID, Username, Email, PasswordUser, DateOfBirth). This data allows simulating the behavior of the social media application and testing various functionalities. This sample data can be used for testing queries.
@@ -89,17 +91,17 @@ This is an example:
 
 ![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/insert%20into%20table.png)
 
- - **post table data**
+- **post table data**
 
-   ![Posts table data](https://github.com/legendadr/MySQL-Project/blob/main/table%20posts.png) 
+  ![Posts table data](https://github.com/legendadr/MySQL-Project/blob/main/table%20posts.png) 
 
- - **like table data**
+- **like table data**
 
-   ![Like table data](https://github.com/legendadr/MySQL-Project/blob/main/table%20like.png) 
+  ![Like table data](https://github.com/legendadr/MySQL-Project/blob/main/table%20like.png) 
 
- - **followers table data**
+- **followers table data**
 
-   ![Followers table data](https://github.com/legendadr/MySQL-Project/blob/main/table%20followers.png)
+  ![Followers table data](https://github.com/legendadr/MySQL-Project/blob/main/table%20followers.png)
 
 
 
