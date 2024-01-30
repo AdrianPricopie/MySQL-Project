@@ -65,16 +65,19 @@ The tables are connected in the following way:
    - `FollowerUserID` (foreign key referencing Users)
 
 
+**Primary Key**: A primary key is a column or set of columns that can serve as a unique identifier for each row in a table. It ensures that each row in the table is uniquely identified. In the 'Social Media' database, each table has an 'ID' column defined as the primary key at the time of table creation. This 'ID' is accompanied by the AUTO_INCREMENT attribute, which automatically generates a unique integer each time a new row is inserted into the table.
+
+**Foreign Key**: A foreign key is a potential identifier that helps establish a connection with other tables. It always contains values that already exist as primary keys in the parent table. In the 'Social Media' database, foreign keys are utilized to establish relationships between tables, linking data based on the primary key of another table.
 
 
+## Database Queries
 
+DDL (Data Definition Language)
+The following instructions were written in the scope of CREATING the structure of the database (CREATE INSTRUCTIONS)
 
-To create tables in SQL, I utilized **DDL (Data Definition Language),** a subset of SQL dedicated to defining and overseeing the structure of a database. DDL statements play a crucial role in creating, altering, and deleting database objects, including tables, indexes, and views.
+![DesignDataBases](https://github.com/legendadr/MySQL-Project/blob/main/create%20databases%20and%20use.png)
 
-This is an example:
-
-
-  ![User data](https://github.com/legendadr/MySQL-Project/blob/main/table3.png)
+![User data](https://github.com/legendadr/MySQL-Project/blob/main/table3.png)
 
 In the example above, I created the "users" table, which includes the following columns:
 - **User ID**, which is unique, is of type INT (integer), representing whole numbers.
@@ -82,12 +85,6 @@ In the example above, I created the "users" table, which includes the following 
 - **Email** has the data type VARCHAR(255), a string of up to 255 characters. The UNIQUE constraint enforces that values in a column or a combination of columns must be unique across the entire dataset of the table.
 - **Password** is of type VARCHAR(125), a string of up to 125 characters.
 - **DateOfBirth** is of type DATE, storing only dates in the format year/month/day.
-
-
-
-**Primary Key**: A primary key is a column or set of columns that can serve as a unique identifier for each row in a table. It ensures that each row in the table is uniquely identified. In the 'Social Media' database, each table has an 'ID' column defined as the primary key at the time of table creation. This 'ID' is accompanied by the AUTO_INCREMENT attribute, which automatically generates a unique integer each time a new row is inserted into the table.
-
-**Foreign Key**: A foreign key is a potential identifier that helps establish a connection with other tables. It always contains values that already exist as primary keys in the parent table. In the 'Social Media' database, foreign keys are utilized to establish relationships between tables, linking data based on the primary key of another table.
 
 
 ## Tables Data:
