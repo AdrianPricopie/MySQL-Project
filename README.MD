@@ -1,9 +1,21 @@
 
-# Social Media Project
+# Database Project for Social Media 
 
+The scope of this project is to use all the SQL knowledge gained throught the Software Testing course and apply them in practice.
 This project represents a simple social media application with functionalities for adding users, posts, comments, likes, and followers. It was developed using MySQL Workbench and includes CRUD operations for data management. Methods for Create (CREATE), Read (READ), Update (UPDATE), and Delete (DELETE) have been applied to the main entities such as Users, Posts, Comments, Likes, and Followers.
 
-You can find the code [**here**](https://github.com/legendadr/MySQL-Project/blob/main/MySqlProjectFile.sql).
+Tools used: MySQL Workbench.You can find the code [**here**](https://github.com/legendadr/MySQL-Project/blob/main/MySqlProjectFile.sql).
+
+
+
+You can find below the database schema that was generated through Reverse Engineer and which contains all the tables and the relationships between them.
+The tables are connected in the following way:
+
+
+
+
+
+
 
 
 To create tables in SQL, I utilized **DDL (Data Definition Language),** a subset of SQL dedicated to defining and overseeing the structure of a database. DDL statements play a crucial role in creating, altering, and deleting database objects, including tables, indexes, and views.
