@@ -12,33 +12,9 @@ You can find below the database schema that was generated through Reverse Engine
 The tables are connected in the following way:
 
 
-
-
-
-
-
-
-To create tables in SQL, I utilized **DDL (Data Definition Language),** a subset of SQL dedicated to defining and overseeing the structure of a database. DDL statements play a crucial role in creating, altering, and deleting database objects, including tables, indexes, and views.
-
-This is an example:
-
-
-  ![User data](https://github.com/legendadr/MySQL-Project/blob/main/table3.png)
-
-In the example above, I created the "users" table, which includes the following columns:
-- **User ID**, which is unique, is of type INT (integer), representing whole numbers.
-- **Username** has the data type VARCHAR(32), a string of up to 32 characters, and it cannot be left empty.
-- **Email** has the data type VARCHAR(255), a string of up to 255 characters. The UNIQUE constraint enforces that values in a column or a combination of columns must be unique across the entire dataset of the table.
-- **Password** is of type VARCHAR(125), a string of up to 125 characters.
-- **DateOfBirth** is of type DATE, storing only dates in the format year/month/day.
-
-
-
-
 ## Database Structure
 
- ![DesignDataBases](https://github.com/legendadr/MySQL-Project/blob/main/designDataBases.png)
-
+![DesignDataBases](https://github.com/legendadr/MySQL-Project/blob/main/design%20baza%20de%20date%20noua.png)
 
 ### Table Relationships:
 
@@ -53,7 +29,7 @@ In the example above, I created the "users" table, which includes the following 
 - Table Posts (Many) - Table Users (One): Multiple posts can be associated with a single user.
 - Table Comments (Many) - Table Posts (One): Multiple comments can be associated with a single post.
 - Table Likes (Many) - Table Posts (One): Multiple likes can be associated with a single post.
-- Table Followers (Many) - Table Users (One): Multiple followers can be associated with a single user.
+- Table User_Followers (Many) - Table Users (One): Multiple followers can be associated with a single user.
 
 ### Tables
 
@@ -83,10 +59,30 @@ In the example above, I created the "users" table, which includes the following 
    - `UserID` (foreign key referencing Users)
    - `LikeCount` (number of likes, default value 1)
 
-#### 5. Followers
+#### 5. User_Followers
    - `FollowerID` (primary key, auto-increment)
    - `UserID` (foreign key referencing Users)
    - `FollowerUserID` (foreign key referencing Users)
+
+
+
+
+
+
+To create tables in SQL, I utilized **DDL (Data Definition Language),** a subset of SQL dedicated to defining and overseeing the structure of a database. DDL statements play a crucial role in creating, altering, and deleting database objects, including tables, indexes, and views.
+
+This is an example:
+
+
+  ![User data](https://github.com/legendadr/MySQL-Project/blob/main/table3.png)
+
+In the example above, I created the "users" table, which includes the following columns:
+- **User ID**, which is unique, is of type INT (integer), representing whole numbers.
+- **Username** has the data type VARCHAR(32), a string of up to 32 characters, and it cannot be left empty.
+- **Email** has the data type VARCHAR(255), a string of up to 255 characters. The UNIQUE constraint enforces that values in a column or a combination of columns must be unique across the entire dataset of the table.
+- **Password** is of type VARCHAR(125), a string of up to 125 characters.
+- **DateOfBirth** is of type DATE, storing only dates in the format year/month/day.
+
 
 
 **Primary Key**: A primary key is a column or set of columns that can serve as a unique identifier for each row in a table. It ensures that each row in the table is uniquely identified. In the 'Social Media' database, each table has an 'ID' column defined as the primary key at the time of table creation. This 'ID' is accompanied by the AUTO_INCREMENT attribute, which automatically generates a unique integer each time a new row is inserted into the table.
