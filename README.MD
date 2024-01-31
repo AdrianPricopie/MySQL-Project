@@ -97,6 +97,11 @@ Below you can find all the insert instructions that were created in the scope of
 this is an example where I add multiple row in the same time
 ![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/insert%20into%20table.png)
 
+![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/insert%233.png)
+
+![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/insert%234.png)
+
+
 ## Tables Data:
 
 - **User table data**
