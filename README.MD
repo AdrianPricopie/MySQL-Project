@@ -87,6 +87,16 @@ In the example above, I created the "users" table, which includes the following 
 - **DateOfBirth** is of type DATE, storing only dates in the format year/month/day.
 
 
+DML (Data Manipulation Language)
+In order to be able to use the database I populated the tables with various data necessary in order to perform queries and manipulate the data. In the testing process, this necessary data is identified in the Test Design phase and created in the Test Implementation phase.
+
+Below you can find all the insert instructions that were created in the scope of this project:
+
+![User data](https://github.com/legendadr/MySQL-Project/blob/main/inset%231.png)
+
+this is an example where I add multiple row in the same time
+![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/insert%20into%20table.png)
+
 ## Tables Data:
 
 - **User table data**
