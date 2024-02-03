@@ -269,3 +269,27 @@ DELETE FROM Followers
 WHERE FollowerUserID = 2;
 
 
+-- Utilizarea HAVING pentru a filtra rezultatele în funcție de numărul minim de like-uri
+SELECT Posts.PostID, TextOfPosts, COUNT(Likes.LikeID) AS LikeCount
+FROM Posts
+LEFT JOIN Likes ON Posts.PostID = Likes.PostID
+GROUP BY Posts.PostID, TextOfPosts
+HAVING LikeCount >= 2;
+
+-- Utilizarea GROUP BY și COUNT pentru a număra câte postări are fiecare utilizator
+SELECT Users.UserID, Users.Username, COUNT(Posts.PostID) AS NumarPostari
+FROM Users
+LEFT JOIN Posts ON Users.UserID = Posts.UserID
+GROUP BY Users.UserID, Users.Username;
+
+-- INNER JOIN pentru a obține postările și utilizatorii corespunzători
+SELECT Posts.PostID, TextOfPosts, Users.Username
+FROM Posts
+INNER JOIN Users ON Posts.UserID = Users.UserID;
+
+
+
+
+
+
+
