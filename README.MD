@@ -61,7 +61,7 @@ The tables are connected in the following way:
 
 #### 5. User_Followers
    - `FollowerID` (primary key, auto-increment)
-   - `UserID` (foreign key referencing Users)
+   - `FollowerUserID` (foreign key referencing Users)
    - `FollowerUserID` (foreign key referencing Users)
 
 
