@@ -72,7 +72,8 @@ The tables are connected in the following way:
 
 ## Database Queries
 
-DDL (Data Definition Language)
+### DDL (Data Definition Language)
+
 The following instructions were written in the scope of CREATING the structure of the database (CREATE INSTRUCTIONS)
 
 ![DesignDataBases](https://github.com/legendadr/MySQL-Project/blob/main/create%20databases%20and%20use.png)
@@ -87,7 +88,8 @@ In the example above, I created the "users" table, which includes the following 
 - **DateOfBirth** is of type DATE, storing only dates in the format year/month/day.
 
 
-DML (Data Manipulation Language)
+### DML (Data Manipulation Language)
+
 In order to be able to use the database I populated the tables with various data necessary in order to perform queries and manipulate the data. In the testing process, this necessary data is identified in the Test Design phase and created in the Test Implementation phase.
 
 Below you can find all the insert instructions that were created in the scope of this project:
@@ -106,7 +108,8 @@ After the insert, in order to prepare the data to be better suited for the testi
 
 ![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/update.png)
 
-DQL (Data Query Language)
+### DQL (Data Query Language)
+
 After the testing process, I deleted the data that was no longer relevant in order to preserve the database clean:
 
 ![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/delete%20instructions.png)
@@ -122,38 +125,22 @@ In order to simulate various scenarios that might happen in real life I created 
 
 ![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/select%20%234.png)
 
+## Conclusions:
 
-## Tables Data:
+This database project for a social media application has been a comprehensive and practical application of SQL knowledge gained throughout the Software Testing course. The following key points summarize the work and lessons learned:
 
-- **User table data**
+**SQL Application:** The project provided hands-on experience in applying SQL concepts, including data definition, manipulation, and querying. Creating tables, establishing relationships, and performing CRUD operations enhanced the understanding of SQL in a real-world context.
 
-![User data](https://github.com/legendadr/MySQL-Project/blob/main/User%20Table%20Data.png)
+**Database Design and Relationships:** Designing the database schema and establishing relationships between tables were crucial aspects of the project. The clear representation of one-to-many and many-to-one relationships laid a strong foundation for effective data management.
 
-Each row in the table represents a user, and the columns represent different attributes or properties of a user (e.g., UserID, Username, Email, PasswordUser, DateOfBirth). This data allows simulating the behavior of the social media application and testing various functionalities. This sample data can be used for testing queries.
+**Tools Proficiency:** Working with MySQL Workbench showcased proficiency in using database management tools. The ability to translate conceptual designs into executable SQL code was developed and honed during the project.
 
-For creating this table, I used **DML - Data Manipulation Language.** From the DML subset, instructions such as INSERT, UPDATE, DELETE are part of it. With these instructions, we can insert one or more rows into a previously created table.
+**Realistic Data Scenarios:** The inclusion of realistic data scenarios during testing demonstrated the importance of testing in a manner that reflects actual usage patterns. This contributed to the identification of potential issues and ensured the robustness of the database.
 
-This is an example:
+**Querying Strategies:** The project involved creating diverse querying scenarios, covering a range of use cases. This helped in developing effective querying strategies and understanding how to retrieve specific information from a complex database structure.
 
-![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/insert%20into%20table.png)
+**Testing Considerations:** While testing was briefly mentioned, further emphasis on testing methodologies and strategies could enhance the project's overall quality. Testing is a critical aspect of software development, and a more detailed approach could be beneficial.
 
-- **post table data**
-
-  ![Posts table data](https://github.com/legendadr/MySQL-Project/blob/main/table%20posts.png) 
-
-- **like table data**
-
-  ![Like table data](https://github.com/legendadr/MySQL-Project/blob/main/table%20like.png) 
-
-- **followers table data**
-
-  ![Followers table data](https://github.com/legendadr/MySQL-Project/blob/main/table%20followers.png)
-
-
-
-## SQL Example Commands
-
-The project includes SQL commands for creating databases, tables, and examples of data insertion.
-
+*In conclusion*, this database project has been a valuable opportunity to apply theoretical knowledge to a practical scenario, reinforcing SQL concepts and skills. It serves as a foundation for further exploration and improvement in database design and management. The experience gained from this project contributes to a broader understanding of software development and database administration.
 
 
