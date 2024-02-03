@@ -106,6 +106,22 @@ After the insert, in order to prepare the data to be better suited for the testi
 
 ![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/update.png)
 
+DQL (Data Query Language)
+After the testing process, I deleted the data that was no longer relevant in order to preserve the database clean:
+
+![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/delete%20instructions.png)
+
+In order to simulate various scenarios that might happen in real life I created the following queries that would cover multiple potential real-life situations:
+
+
+![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/select%20%232.png)
+
+
+![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/select%20%234.png)
+
+
+![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/select%20%234.png)
+
 
 ## Tables Data:
 
