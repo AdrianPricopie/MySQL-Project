@@ -260,5 +260,12 @@ Update Users
 set DateofBirth='1995-05-15'
 Where userID=1;
 
+-- Ștergeți toate postările utilizatorilor născuți după anul 2000
+DELETE FROM Posts
+WHERE UserID IN (SELECT UserID FROM Users WHERE DateOfBirth > '2000-01-01');
+
+-- Ștergeți toate urmările pentru utilizatorul cu ID-ul 2
+DELETE FROM Followers
+WHERE FollowerUserID = 2;
 
 
