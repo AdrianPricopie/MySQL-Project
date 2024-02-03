@@ -125,6 +125,9 @@ In order to simulate various scenarios that might happen in real life I created 
 
 ![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/select%20%234.png)
 
+![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/selecturi%20%235.png)
+
+
 ## Conclusions:
 
 This database project for a social media application has been a comprehensive and practical application of SQL knowledge gained throughout the Software Testing course. The following key points summarize the work and lessons learned:
