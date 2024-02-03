@@ -229,5 +229,36 @@ WHERE PostID = 1;
 SELECT AVG(LikeCount) AS AvgLikes
 FROM Likes;
 
+-- modificam username ul pentru utilizatorul cu id ul 5
+
+Update Users
+SET Username= 'ioanaBaboi7'
+WHERE UserID=5;
+
+--modificam textul postari cu id ul 2
+
+Update Posts
+Set TextofPosts='Calatorind prin Apuseni'
+Where PostID=2;
+
+-- modificam comentariul cu id ul 3
+Update comments
+set commentText='Experinta impresionanta!'
+Where commentID=3;
+--modificam numarul de like uri pentru postarea cu id ul 1
+Update likes
+set likeCount=10
+Where PostID=1;
+
+--modificam utilizatorul care urmareste utilizatorul cu id ul 3
+Update followers 
+set followerUserID= 5
+Where UserID=3;
+
+--modificam data de nastere pentru utilizatorul cu id ul 1
+Update Users
+set DateofBirth='1995-05-15'
+Where userID=1;
+
 
 
