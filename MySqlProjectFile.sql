@@ -57,8 +57,8 @@ FOREIGN KEY (UserID) REFERENCES Users(UserID)
 #Afisam structura tabelei likes
 desc likes;
 
-CREATE TABLE Followers (
-    FollowerID INT PRIMARY KEY auto_increment,
+CREATE TABLE User_Followers (
+    User_Followers_ID INT PRIMARY KEY auto_increment,
     UserID INT,
     FollowerUserID INT,
     FOREIGN KEY (UserID) REFERENCES Users(UserID),
