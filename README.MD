@@ -92,7 +92,7 @@ In order to be able to use the database I populated the tables with various data
 
 Below you can find all the insert instructions that were created in the scope of this project:
 
-![User data](https://github.com/legendadr/MySQL-Project/blob/main/inset%231.png)
+![User data](https://github.com/legendadr/MySQL-Project/blob/main/DML%20%231.png)
 
 this is an example where I add multiple row in the same time
 ![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/insert%20into%20table.png)
