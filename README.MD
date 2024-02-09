@@ -100,7 +100,7 @@ this is an example where I add multiple row in the same time
 
 ![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/Comments%20DML.png)
 
-![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/insert%234.png)
+![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/DML%20%234.png)
 
 After the insert, in order to prepare the data to be better suited for the testing process, I updated some data in the following way:
 
