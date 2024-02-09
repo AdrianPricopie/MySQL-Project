@@ -98,7 +98,7 @@ this is an example where I add multiple row in the same time
 
 ![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/DML%20%232.png)
 
-![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/insert%233.png)
+![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/Comments%20DML.png)
 
 ![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/insert%234.png)
 
