@@ -76,9 +76,7 @@ The tables are connected in the following way:
 
 The following instructions were written in the scope of CREATING the structure of the database (CREATE INSTRUCTIONS)
 
-![DesignDataBases](https://github.com/legendadr/MySQL-Project/blob/main/create%20databases%20and%20use.png)
-
-![User data](https://github.com/legendadr/MySQL-Project/blob/main/table3.png)
+![DesignDataBases](https://github.com/legendadr/MySQL-Project/blob/main/DDL.png)
 
 In the example above, I created the "users" table, which includes the following columns:
 - **User ID**, which is unique, is of type INT (integer), representing whole numbers.
