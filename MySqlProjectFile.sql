@@ -186,10 +186,6 @@ LEFT JOIN Likes ON Posts.PostID = Likes.PostID
 GROUP BY Posts.PostID, TextOfPosts
 HAVING LikeCount >= 2;
 
-#Realizăm o îmbinare a fiecărui utilizator cu toate postările (toate combinațiile posibile)
-SELECT Users.UserID, Users.Username, Posts.PostID, Posts.TextOfPosts
-FROM Users
-CROSS JOIN Posts;
 
 #Afișăm comentariile și utilizatorii care le-au făcut pentru postarea cu ID-ul 1
 SELECT Comments.CommentID, CommentText, Users.Username
@@ -287,7 +283,79 @@ SELECT Posts.PostID, TextOfPosts, Users.Username
 FROM Posts
 INNER JOIN Users ON Posts.UserID = Users.UserID;
 
+-- cate like uri au fost primite pentru postarea  cu ID-ul 1
 
+select LikeCount
+from likes
+Where PostID = 1;
+
+-- suma totala a like urilor pentru postarea cu id ul 1;
+SELECT SUM(LikeCount) AS TotalLikes
+FROM Likes
+WHERE PostID = 1;
+
+-- selectam postarea cu cele mai multe like uri
+SELECT PostID, MAX(LikeCount) AS MaxLikes
+FROM Likes
+GROUP BY PostID
+ORDER BY MaxLikes DESC
+limit 1;
+
+-- selectam care a fost utilizatorul cu cele mai multe postari
+
+select UserID , count(PostID) as Numarpostari
+from posts
+group by userID
+Order By numarpostari desc
+limit 1;
+
+-- care a fost cea mai populara postare in 2023
+
+select Posts.PostID,Posts.TextOfPosts,Count(likes.LikeCount) AS likeCount
+from posts
+left join likes on Posts.PostID = likes.PostID
+WHERE year(Posts.Postdate) = 2023
+group by Posts.PostID,Posts.TextOfPosts
+Order by likeCount desc
+limit 1;
+
+-- cate comentarii au fost facute la nivel de posts
+
+select Posts.PostID,count(comments.CommentID) as commentCount
+from posts
+left join comments on Posts.PostID = Comments.PostID
+group by posts.PostID;
+
+-- care utilizator nu are nici  un comentariu
+
+select users.UserID,users.Username
+from users
+left join comments on users.UserID = comments.UserID
+Where comments.CommentID is null;
+
+-- care utilizator nu are nici o postare
+
+select users.UserID,users.Username
+from  users
+left join posts on users.UserID = posts.PostID
+where posts.postID is null;
+
+-- selectam cati followers sunt per fiecare utilizator
+
+select userID ,count(user_followers.FollowerUserID) as NumarFollowers
+from user_followers
+group by UserID;
+
+-- Cautăm toate postările care conțin cuvântul "pisică"
+
+SELECT * FROM Posts
+WHERE TextOfPosts LIKE '%pisică%';
+
+-- Selectăm toți utilizatorii, postările și comentariile aferente
+SELECT  Users.Username, Posts.TextOfPosts, Comments.CommentText
+FROM Users
+LEFT JOIN Posts ON Users.UserID = Posts.UserID
+LEFT JOIN Comments ON Posts.PostID = Comments.PostID;
 
 
 
