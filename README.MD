@@ -14,7 +14,7 @@ The tables are connected in the following way:
 
 ## Database Structure
 
-![DesignDataBases](https://github.com/legendadr/MySQL-Project/blob/main/design%20baza%20de%20date%20noua.png)
+![DesignDataBases](https://github.com/legendadr/MySQL-Project/blob/main/DataBases%20structure.png)
 
 ### Table Relationships:
 
