@@ -119,16 +119,13 @@ After the testing process, I deleted the data that was no longer relevant in ord
 In order to simulate various scenarios that might happen in real life I created the following queries that would cover multiple potential real-life situations:
 
 
-![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/select%20%232.png)
+![DATA Query language](https://github.com/legendadr/MySQL-Project/blob/main/DQL%20%231.png)
 
+![DATA Query language](https://github.com/legendadr/MySQL-Project/blob/main/DQL%20%20%232.png)
 
-![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/select%20%234.png)
+![DATA Query language](https://github.com/legendadr/MySQL-Project/blob/main/dql%20%233.png)
 
-
-![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/select%20%234.png)
-
-![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/selecturi%20%235.png)
-
+![DATA Query language](https://github.com/legendadr/MySQL-Project/blob/main/DQL%20%234.png)
 
 ## Conclusions:
 
