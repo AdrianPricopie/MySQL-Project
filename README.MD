@@ -121,7 +121,7 @@ In order to simulate various scenarios that might happen in real life I created 
 
 ![DATA Query language](https://github.com/legendadr/MySQL-Project/blob/main/DQL%20%231.png)
 
-![DATA Query language](https://github.com/legendadr/MySQL-Project/blob/main/DQL%20%20%232.png)
+![DATA Query language](https://github.com/legendadr/MySQL-Project/blob/main/DQL%20%232.png)
 
 ![DATA Query language](https://github.com/legendadr/MySQL-Project/blob/main/dql%20%233.png)
 
