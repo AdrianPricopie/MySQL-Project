@@ -14,7 +14,7 @@ The tables are connected in the following way:
 
 ## Database Structure
 
-![DesignDataBases](https://github.com/legendadr/MySQL-Project/blob/main/DataBases%20structure.png)
+![DesignDataBases](https://github.com/AdrianPricopie/MySQL-Project/blob/main/DataBases%20structure.png)
 
 ### Table Relationships:
 
@@ -57,7 +57,6 @@ The tables are connected in the following way:
    - `LikeID` (primary key, auto-increment)
    - `PostID` (foreign key referencing Posts)
    - `UserID` (foreign key referencing Users)
-   - `LikeCount` (number of likes, default value 1)
 
 #### 5. User_Followers
    - `FollowerID` (primary key, auto-increment)
