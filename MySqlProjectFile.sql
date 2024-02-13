@@ -49,7 +49,6 @@ Create table likes(
 LikeID int primary key auto_increment,
 PostID int,
 UserID int,
-LikeCount int default 1,
 FOREIGN KEY (PostID) REFERENCES Posts(PostID),
 FOREIGN KEY (UserID) REFERENCES Users(UserID)
 );
@@ -111,16 +110,16 @@ VALUES
 SELECT * FROM Comments;
 
 -- Adăugare like pentru postarea cu ID-ul 1 de la utilizatorul cu ID-ul 2
-INSERT INTO Likes (PostID, UserID, LikeCount)
-VALUES (1, 2, 1);
+INSERT INTO Likes (PostID, UserID )
+VALUES (1, 2);
 
 -- Adăugare mai multe like-uri pentru diferite postări și utilizatori
-INSERT INTO Likes (PostID, UserID, LikeCount)
+INSERT INTO Likes (PostID, UserID)
 VALUES
-  (1, 3, 1),
-  (2, 4, 1),
-  (3, 5, 1),
-  (4, 1, 1);
+  (1, 3),
+  (2, 4),
+  (3, 5),
+  (4, 1);
 
 -- Vizualizarea rezultatelor
 SELECT * FROM Likes;
@@ -216,15 +215,6 @@ FROM Users
 LEFT JOIN Posts ON Users.UserID = Posts.UserID
 GROUP BY Users.UserID, Users.Username;
 
--- Adaugă încă 5 like-uri pentru postarea cu ID-ul 1
-UPDATE Likes
-SET LikeCount = LikeCount + 5
-WHERE PostID = 1;
-
--- Afișează media like-urilor pentru toate postările
-SELECT AVG(LikeCount) AS AvgLikes
-FROM Likes;
-
 -- modificam username ul pentru utilizatorul cu id ul 5
 
 Update Users
@@ -241,10 +231,6 @@ Where PostID=2;
 Update comments
 set commentText='Experinta impresionanta!'
 Where commentID=3;
--- modificam numarul de like uri pentru postarea cu id ul 1
-Update likes
-set likeCount=10
-Where PostID=1;
 
 -- modificam utilizatorul care urmareste utilizatorul cu id ul 3
 Update followers 
@@ -283,16 +269,6 @@ SELECT Posts.PostID, TextOfPosts, Users.Username
 FROM Posts
 INNER JOIN Users ON Posts.UserID = Users.UserID;
 
--- cate like uri au fost primite pentru postarea  cu ID-ul 1
-
-select LikeCount
-from likes
-Where PostID = 1;
-
--- suma totala a like urilor pentru postarea cu id ul 1;
-SELECT SUM(LikeCount) AS TotalLikes
-FROM Likes
-WHERE PostID = 1;
 
 -- selectam postarea cu cele mai multe like uri
 SELECT PostID, MAX(LikeCount) AS MaxLikes
@@ -301,13 +277,6 @@ GROUP BY PostID
 ORDER BY MaxLikes DESC
 limit 1;
 
--- selectam care a fost utilizatorul cu cele mai multe postari
-
-select UserID , count(PostID) as Numarpostari
-from posts
-group by userID
-Order By numarpostari desc
-limit 1;
 
 -- care a fost cea mai populara postare in 2023
 
@@ -356,8 +325,3 @@ SELECT  Users.Username, Posts.TextOfPosts, Comments.CommentText
 FROM Users
 LEFT JOIN Posts ON Users.UserID = Posts.UserID
 LEFT JOIN Comments ON Posts.PostID = Comments.PostID;
-
-
-
-
-
