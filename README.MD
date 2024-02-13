@@ -14,7 +14,7 @@ The tables are connected in the following way:
 
 ## Database Structure
 
-![DesignDataBases](https://github.com/AdrianPricopie/MySQL-Project/blob/main/DataBases%20structure.png)
+![DesignDataBases](https://github.com/AdrianPricopie/MySQL-Project/blob/main/DataBases_Structure.png)
 
 ### Table Relationships:
 
