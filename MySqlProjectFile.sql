@@ -165,6 +165,17 @@ select dateOfBirth from Users;
 
 select dateofbirth ,username from Users where dateofBirth > '2000-01-01';
 
+#Afisam toate zilele de nastere ale utilizatorilor in functie de  luna a 2 a;
+
+SELECT DateOfBirth
+FROM Users
+WHERE EXTRACT(MONTH FROM DateOfBirth) = 6;
+
+#Afisam toate zilele de nastere ale utilizatorilor in functie de prima zi a luni
+SELECT DateOfBirth
+FROM Users
+WHERE EXTRACT(DAY FROM DateOfBirth) = 1;
+
 #Afisam postarile  utilizatorului cu id=1  intre datele 2023-01-17 si 2023-01-18
 
 select * from posts where UserID = 1 and PostDate between '2023-01-17' and '2023-01-18';
@@ -175,15 +186,9 @@ SELECT * FROM Followers WHERE FollowerUserID = 2;
 #Afisăm toate postările care au primit like-uri, împreună cu numărul total de like-uri pentru fiecare postare
 SELECT Posts.PostID, TextOfPosts, COUNT(Likes.LikeID) AS LikeCount
 FROM Posts
-LEFT JOIN Likes ON Posts.PostID = Likes.PostID
+INNER JOIN Likes ON Posts.PostID = Likes.PostID
 GROUP BY Posts.PostID, TextOfPosts;
 
-#Afisăm toate postările care au primit cel puțin 2 like-uri
-SELECT Posts.PostID, TextOfPosts, COUNT(Likes.LikeID) AS LikeCount
-FROM Posts
-LEFT JOIN Likes ON Posts.PostID = Likes.PostID
-GROUP BY Posts.PostID, TextOfPosts
-HAVING LikeCount >= 2;
 
 
 #Afișăm comentariile și utilizatorii care le-au făcut pentru postarea cu ID-ul 1
@@ -271,12 +276,12 @@ INNER JOIN Users ON Posts.UserID = Users.UserID;
 
 
 -- selectam postarea cu cele mai multe like uri
-SELECT PostID, MAX(LikeCount) AS MaxLikes
-FROM Likes
-GROUP BY PostID
-ORDER BY MaxLikes DESC
-limit 1;
-
+SELECT Posts.PostID, COUNT(Likes.LikeID) AS LikeCount
+FROM Posts
+LEFT JOIN Likes ON Posts.PostID = Likes.PostID
+GROUP BY Posts.PostID
+ORDER BY LikeCount DESC
+LIMIT 1;
 
 -- care a fost cea mai populara postare in 2023
 
@@ -324,4 +329,5 @@ WHERE TextOfPosts LIKE '%pisică%';
 SELECT  Users.Username, Posts.TextOfPosts, Comments.CommentText
 FROM Users
 LEFT JOIN Posts ON Users.UserID = Posts.UserID
-LEFT JOIN Comments ON Posts.PostID = Comments.PostID;
+LEFT JOIN Comments ON Posts.PostID = Comments.PostID
+Where Posts.TextOfPosts is not null and Comments.CommentText is not null;
