@@ -1,4 +1,3 @@
-
 # Database Project for Social Media 
 
 The scope of this project is to use all the SQL knowledge gained throught the Software Testing course and apply them in practice.
@@ -74,9 +73,21 @@ The tables are connected in the following way:
 ### DDL (Data Definition Language)
 
 The following instructions were written in the scope of CREATING the structure of the database (CREATE INSTRUCTIONS)
+```
+#Create Database and use;
+create database SocialMedia;
+use socialmedia;
 
-![DesignDataBases](https://github.com/legendadr/MySQL-Project/blob/main/DDL.png)
-
+#Create table Users in SocialMedia databases;
+Create table Users(
+UserID int primary key auto_increment,
+Username varchar(32) not null,
+Email varchar(255)  unique not null,
+PasswordUser varchar(32) not null,
+PasswordByUSER INT,
+DateOfBirth date 
+);
+```
 In the example above, I created the "users" table, which includes the following columns:
 - **User ID**, which is unique, is of type INT (integer), representing whole numbers.
 - **Username** has the data type VARCHAR(32), a string of up to 32 characters, and it cannot be left empty.
