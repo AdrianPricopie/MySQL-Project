@@ -74,18 +74,18 @@ The tables are connected in the following way:
 
 The following instructions were written in the scope of CREATING the structure of the database (CREATE INSTRUCTIONS)
 ```
-#Create Database and use;
-create database SocialMedia;
-use socialmedia;
+# Create Database and use;
+CREATE DATABASE SocialMedia;
+USE socialmedia;
 
-#Create table Users in SocialMedia databases;
-Create table Users(
-UserID int primary key auto_increment,
-Username varchar(32) not null,
-Email varchar(255)  unique not null,
-PasswordUser varchar(32) not null,
-PasswordByUSER INT,
-DateOfBirth date 
+# Create table Users in SocialMedia database;
+CREATE TABLE Users(
+    UserID INT PRIMARY KEY AUTO_INCREMENT,
+    Username VARCHAR(32) NOT NULL,
+    Email VARCHAR(255) UNIQUE NOT NULL,
+    PasswordUser VARCHAR(32) NOT NULL,
+    PasswordByUSER INT,
+    DateOfBirth DATE
 );
 ```
 In the example above, I created the "users" table, which includes the following columns:
