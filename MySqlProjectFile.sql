@@ -155,7 +155,7 @@ select * from Users where UserID='5';
 
 #Afisati toate commentarile care contin textul Interesant!
 
-select * from comments where CommentText = 'Interesant!'; 
+select * from comments where CommentText like  '%Interesant!%'; 
 
 #Afisam toate zilele de nastere ale utilizatorilor de pe platforma;
 
@@ -164,6 +164,10 @@ select dateOfBirth from Users;
 #Afisam toate zilele de nastere ale utilizatorilor dupa anul 2000-01-01
 
 select dateofbirth ,username from Users where dateofBirth > '2000-01-01';
+
+#Afisam toate zilele de nastere ale utilizatorilor dupa anul 2005
+    
+select dateofbirth,username from Users where extract(year from dateofBirth)>2005;
 
 #Afisam toate zilele de nastere ale utilizatorilor in functie de  luna a 2 a;
 
@@ -279,6 +283,7 @@ INNER JOIN Users ON Posts.UserID = Users.UserID;
 SELECT Posts.PostID, COUNT(Likes.LikeID) AS LikeCount
 FROM Posts
 LEFT JOIN Likes ON Posts.PostID = Likes.PostID
+where Likes.PostId is not null
 GROUP BY Posts.PostID
 ORDER BY LikeCount DESC
 LIMIT 1;
