@@ -73,7 +73,7 @@ The tables are connected in the following way:
 ### DDL (Data Definition Language)
 
 The following instructions were written in the scope of CREATING the structure of the database (CREATE INSTRUCTIONS)
-```
+```sql
 # Create Database and use;
 CREATE DATABASE SocialMedia;
 USE socialmedia;
