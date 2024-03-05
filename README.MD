@@ -228,12 +228,166 @@ WHERE FollowerUserID = 2;
 In order to simulate various scenarios that might happen in real life I created the following queries that would cover multiple potential real-life situations:
 
 
-![DATA Query language](https://github.com/AdrianPricopie/MySQL-Project/blob/main/DQL_1.png)
+```sql
+-- Utilizarea HAVING pentru a filtra rezultatele în funcție de numărul minim de like-uri
+SELECT Posts.PostID, TextOfPosts, COUNT(Likes.LikeID) AS LikeCount
+FROM Posts
+LEFT JOIN Likes ON Posts.PostID = Likes.PostID
+GROUP BY Posts.PostID, TextOfPosts
+HAVING LikeCount >= 2;
 
-![DATA Query language](https://github.com/AdrianPricopie/MySQL-Project/blob/main/DQL_2.png)
+-- Utilizarea GROUP BY și COUNT pentru a număra câte postări are fiecare utilizator
+SELECT Users.UserID, Users.Username, COUNT(Posts.PostID) AS NumarPostari
+FROM Users
+LEFT JOIN Posts ON Users.UserID = Posts.UserID
+GROUP BY Users.UserID, Users.Username;
 
-![DATA Query language](https://github.com/AdrianPricopie/MySQL-Project/blob/main/DQL_3.png)
+-- INNER JOIN pentru a obține postările și utilizatorii corespunzători
+SELECT Posts.PostID, TextOfPosts, Users.Username
+FROM Posts
+INNER JOIN Users ON Posts.UserID = Users.UserID;
 
+
+-- selectam postarea cu cele mai multe like uri
+SELECT Posts.PostID, COUNT(Likes.LikeID) AS LikeCount
+FROM Posts
+LEFT JOIN Likes ON Posts.PostID = Likes.PostID
+where Likes.PostId is not null
+GROUP BY Posts.PostID
+ORDER BY LikeCount DESC
+LIMIT 1;
+
+-- care a fost cea mai populara postare in 2023
+
+select Posts.PostID,Posts.TextOfPosts,Count(likes.LikeCount) AS likeCount
+from posts
+left join likes on Posts.PostID = likes.PostID
+WHERE year(Posts.Postdate) = 2023
+group by Posts.PostID,Posts.TextOfPosts
+Order by likeCount desc
+limit 1;
+
+-- cate comentarii au fost facute la nivel de posts
+
+select Posts.PostID,count(comments.CommentID) as commentCount
+from posts
+left join comments on Posts.PostID = Comments.PostID
+group by posts.PostID;
+
+-- care utilizator nu are nici  un comentariu
+
+select users.UserID,users.Username
+from users
+left join comments on users.UserID = comments.UserID
+Where comments.CommentID is null;
+
+-- care utilizator nu are nici o postare
+
+select users.UserID,users.Username
+from  users
+left join posts on users.UserID = posts.PostID
+where posts.postID is null;
+
+-- selectam cati followers sunt per fiecare utilizator
+
+select userID ,count(user_followers.FollowerUserID) as NumarFollowers
+from user_followers
+group by UserID;
+
+-- Cautăm toate postările care conțin cuvântul "pisică"
+
+SELECT * FROM Posts
+WHERE TextOfPosts LIKE '%pisică%';
+
+-- Selectăm toți utilizatorii, postările și comentariile aferente
+SELECT  Users.Username, Posts.TextOfPosts, Comments.CommentText
+FROM Users
+LEFT JOIN Posts ON Users.UserID = Posts.UserID
+LEFT JOIN Comments ON Posts.PostID = Comments.PostID
+Where Posts.TextOfPosts is not null and Comments.CommentText is not null;
+
+#Selectez ultimele postari pentru fiecare utilizator
+SELECT Users.UserID, Users.Username, MAX(Posts.PostDate) AS LatestPostDate
+FROM Users
+LEFT JOIN Posts ON Users.UserID = Posts.UserID
+GROUP BY Users.UserID, Users.Username;
+
+
+#Afisam tabela users
+select * from users ;
+
+#Afișăm comentariile și utilizatorii care le-au făcut pentru postarea cu ID-ul 1
+SELECT Comments.CommentID, CommentText, Users.Username
+FROM Comments
+INNER JOIN Users ON Comments.UserID = Users.UserID
+WHERE Comments.PostID = 1;
+
+#Adaugam un utilizator nou in tablea users
+insert into Users(Username,Email,PasswordUser,DateOfBirth)
+Values('Petrisor','Petrisor.Ionut@yahoo.com','PetrisorIon123','2002-02-01');
+
+-- Vizualizarea rezultatelor
+SELECT * FROM Followers;
+
+#Afișăm utilizatorii ale căror nume de utilizator încep cu litera 'A'
+SELECT * FROM Users
+WHERE Username LIKE 'A%';
+
+#Afișăm utilizatorii ale căror nume de utilizator se termină cu litera 's'
+SELECT * FROM Users
+WHERE Username LIKE '%s';
+
+#Afisam toate datele pentru usernameul Andrada
+select * from Users where Username='Andrada';
+
+#Afisam toate datele pentru utilizatorul cu ID ul 5
+select * from Users where UserID='5';
+
+#Afisati toate commentarile care contin textul Interesant!
+
+select * from comments where CommentText like  '%Interesant!%'; 
+
+#Afisam toate zilele de nastere ale utilizatorilor de pe platforma;
+
+select dateOfBirth from Users;
+
+#Afisam toate zilele de nastere ale utilizatorilor dupa anul 2000-01-01
+
+select dateofbirth ,username from Users where dateofBirth > '2000-01-01';
+
+#Afisam toate zilele de nastere ale utilizatorilor dupa anul 2005
+    
+select dateofbirth,username from Users where extract(year from dateofBirth)>2005;
+
+#Afisam toate zilele de nastere ale utilizatorilor in functie de  luna a 2 a;
+
+SELECT DateOfBirth
+FROM Users
+WHERE EXTRACT(MONTH FROM DateOfBirth) = 6;
+
+#Afisam toate zilele de nastere ale utilizatorilor in functie de prima zi a luni
+SELECT DateOfBirth
+FROM Users
+WHERE EXTRACT(DAY FROM DateOfBirth) = 1;
+
+#Afisam postarile  utilizatorului cu id=1  intre datele 2023-01-17 si 2023-01-18
+
+select * from posts where UserID = 1 and PostDate between '2023-01-17' and '2023-01-18';
+
+#Afisăm toți utilizatorii urmăriți de utilizatorul cu ID-ul 2
+SELECT * FROM Followers WHERE FollowerUserID = 2;
+
+
+#Afișăm comentariile și utilizatorii care le-au făcut pentru postarea cu ID-ul 1
+SELECT Comments.CommentID, CommentText, Users.Username
+FROM Comments
+INNER JOIN Users ON Comments.UserID = Users.UserID
+WHERE Comments.PostID = 1;
+
+#Adaugam un utilizator nou in tablea users
+insert into Users(Username,Email,PasswordUser,DateOfBirth)
+Values('Petrisor','Petrisor.Ionut@yahoo.com','PetrisorIon123','2002-02-01');
+```
 ## Conclusions:
 
 This database project for a social media application has been a comprehensive and practical application of SQL knowledge gained throughout the Software Testing course. The following key points summarize the work and lessons learned:
