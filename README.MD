@@ -117,10 +117,8 @@ Values ('BogdanPisica','BogdanPisica.MiauMiau@yahoo.com','PisicaBogdan','2010-02
 ('EduardGrigoras','Eduard.Grigoras77@yahoo.com','GrigorasIon123','1991-06-12'),
 ('Andrada','Andrada_Filosov@yahoo.com','AndradaMiauMiau','2011-03-19'),
 ('IoanaBaboi12','Baboi.Ionica@yahoo.com','Baboi@Ionica','2003-06-21');
-
 INSERT INTO Posts (UserID, TextOfPosts, PostDate)
 VALUES (1, 'Prima mea postare!', '2023-01-15');
-
 -- Adăugare mai multe postări pentru diferiți utilizatori
 INSERT INTO Posts (UserID, TextOfPosts, PostDate)
 VALUES
@@ -128,10 +126,8 @@ VALUES
   (3, 'Experiență în dezvoltarea software', '2023-01-17'),
   (4, 'Explorând lumea animalelor', '2023-01-18'),
   (5, 'Zi de naștere fericită!', '2023-01-19');
-
 INSERT INTO Comments (PostID, UserID, CommentText, CommentDate)
 VALUES (1, 2, 'Felicitări pentru prima postare!', '2023-01-20');
-
 -- Adăugare mai multe comentarii pentru diferite postări și utilizatori
 INSERT INTO Comments (PostID, UserID, CommentText, CommentDate)
 VALUES
@@ -141,7 +137,6 @@ VALUES
   (4, 1, 'La mulți ani!', '2023-01-24');
 INSERT INTO Likes (PostID, UserID )
 VALUES (1, 2);
-
 -- Adăugare mai multe like-uri pentru diferite postări și utilizatori
 INSERT INTO Likes (PostID, UserID)
 VALUES
@@ -149,15 +144,12 @@ VALUES
   (2, 4),
   (3, 5),
   (4, 1);
-
 -- Utilizatorul cu ID-ul 1 este urmărit de utilizatorul cu ID-ul 2
 INSERT INTO Followers (UserID, FollowerUserID)
 VALUES (1, 2);
-
 -- Utilizatorul cu ID-ul 3 este urmărit de utilizatorul cu ID-ul 1
 INSERT INTO Followers (UserID, FollowerUserID)
 VALUES (3, 1);
-
 -- Utilizatorul cu ID-ul 2 este urmărit de utilizatorul cu ID-ul 4
 INSERT INTO Followers (UserID, FollowerUserID)
 VALUES (2, 4);
