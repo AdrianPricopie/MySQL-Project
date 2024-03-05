@@ -127,6 +127,7 @@ VALUES
 INSERT INTO Comments (PostID, UserID, CommentText, CommentDate)
 VALUES (1, 2, 'Felicitări pentru prima postare!', '2023-01-20');
 '''
+
 After the insert, in order to prepare the data to be better suited for the testing process, I updated some data in the following way:
 
 
