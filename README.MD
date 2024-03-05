@@ -170,7 +170,15 @@ After the insert, in order to prepare the data to be better suited for the testi
 
 After the testing process, I deleted the data that was no longer relevant in order to preserve the database clean:
 
-![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/delete%20instructions.png)
+```sql
+-- Ștergeți toate postările utilizatorilor născuți după anul 2000
+DELETE FROM Posts
+WHERE UserID IN (SELECT UserID FROM Users WHERE DateOfBirth > '2000-01-01');
+
+-- Ștergeți toate urmările pentru utilizatorul cu ID-ul 2
+DELETE FROM Followers
+WHERE FollowerUserID = 2;
+```
 
 
 ### DQL (Data Query Language)
