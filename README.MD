@@ -165,8 +165,50 @@ VALUES (2, 4);
 ```
 After the insert, in order to prepare the data to be better suited for the testing process, I updated some data in the following way:
 
+```sql
+#modificam username ul id ul 7
 
-![Insert into table](https://github.com/legendadr/MySQL-Project/blob/main/update.png)
+update Users
+set Username='PetrisorIonut77'
+where UserID=7;
+
+#Stergem utilizatorul cu id ul 7
+delete from Users
+where UserID=7;
+
+#Selectez ultimele postari pentru fiecare utilizator
+SELECT Users.UserID, Users.Username, MAX(Posts.PostDate) AS LatestPostDate
+FROM Users
+LEFT JOIN Posts ON Users.UserID = Posts.UserID
+GROUP BY Users.UserID, Users.Username;
+
+-- modificam username ul pentru utilizatorul cu id ul 5
+
+Update Users
+SET Username= 'ioanaBaboi7'
+WHERE UserID=5;
+
+-- modificam textul postari cu id ul 2
+
+Update Posts
+Set TextofPosts='Calatorind prin Apuseni'
+Where PostID=2;
+
+-- modificam comentariul cu id ul 3
+Update comments
+set commentText='Experinta impresionanta!'
+Where commentID=3;
+
+-- modificam utilizatorul care urmareste utilizatorul cu id ul 3
+Update followers 
+set followerUserID= 5
+Where UserID=3;
+
+-- modificam data de nastere pentru utilizatorul cu id ul 1
+Update Users
+set DateofBirth='1995-05-15'
+Where userID=1;
+```sql
 
 After the testing process, I deleted the data that was no longer relevant in order to preserve the database clean:
 
