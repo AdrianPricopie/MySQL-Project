@@ -108,8 +108,6 @@ Values('AndreiIonut','Andrei.Ionut@yahoo.com','AndreiIon123','2001-02-01');
 '''
 
 this is an example where I add multiple row in the same time
-
-
 '''sql
 insert into Users(Username,Email,PasswordUser,DateOfBirth)
 Values ('BogdanPisica','BogdanPisica.MiauMiau@yahoo.com','PisicaBogdan','2010-02-01'),
@@ -128,31 +126,6 @@ VALUES
   (5, 'Zi de naștere fericită!', '2023-01-19');
 INSERT INTO Comments (PostID, UserID, CommentText, CommentDate)
 VALUES (1, 2, 'Felicitări pentru prima postare!', '2023-01-20');
--- Adăugare mai multe comentarii pentru diferite postări și utilizatori
-INSERT INTO Comments (PostID, UserID, CommentText, CommentDate)
-VALUES
-  (1, 3, 'Interesant!', '2023-01-21'),
-  (2, 4, 'Excelentă priveliște!', '2023-01-22'),
-  (3, 5, 'Impresionantă experiență!', '2023-01-23'),
-  (4, 1, 'La mulți ani!', '2023-01-24');
-INSERT INTO Likes (PostID, UserID )
-VALUES (1, 2);
--- Adăugare mai multe like-uri pentru diferite postări și utilizatori
-INSERT INTO Likes (PostID, UserID)
-VALUES
-  (1, 3),
-  (2, 4),
-  (3, 5),
-  (4, 1);
--- Utilizatorul cu ID-ul 1 este urmărit de utilizatorul cu ID-ul 2
-INSERT INTO Followers (UserID, FollowerUserID)
-VALUES (1, 2);
--- Utilizatorul cu ID-ul 3 este urmărit de utilizatorul cu ID-ul 1
-INSERT INTO Followers (UserID, FollowerUserID)
-VALUES (3, 1);
--- Utilizatorul cu ID-ul 2 este urmărit de utilizatorul cu ID-ul 4
-INSERT INTO Followers (UserID, FollowerUserID)
-VALUES (2, 4);
 '''
 After the insert, in order to prepare the data to be better suited for the testing process, I updated some data in the following way:
 
