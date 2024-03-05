@@ -102,10 +102,10 @@ In order to be able to use the database I populated the tables with various data
 
 Below you can find all the insert instructions that were created in the scope of this project:
 
-'''sql
+```sql
 insert into Users(Username,Email,PasswordUser,DateOfBirth)
 Values('AndreiIonut','Andrei.Ionut@yahoo.com','AndreiIon123','2001-02-01');
-'''
+```
 
 this is an example where I add multiple row in the same time
 '''sql
