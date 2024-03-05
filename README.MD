@@ -108,7 +108,7 @@ Values('AndreiIonut','Andrei.Ionut@yahoo.com','AndreiIon123','2001-02-01');
 ```
 
 this is an example where I add multiple row in the same time
-'''sql
+```sql
 insert into Users(Username,Email,PasswordUser,DateOfBirth)
 Values ('BogdanPisica','BogdanPisica.MiauMiau@yahoo.com','PisicaBogdan','2010-02-01'),
 ('LegendAdr','Andrei.Margarint@yahoo.com','AndreiMargarint12','2000-12-01'),
@@ -126,8 +126,7 @@ VALUES
   (5, 'Zi de naștere fericită!', '2023-01-19');
 INSERT INTO Comments (PostID, UserID, CommentText, CommentDate)
 VALUES (1, 2, 'Felicitări pentru prima postare!', '2023-01-20');
-'''
-
+```
 After the insert, in order to prepare the data to be better suited for the testing process, I updated some data in the following way:
 
 
