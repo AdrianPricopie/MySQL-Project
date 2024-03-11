@@ -208,9 +208,10 @@ Where UserID=3;
 Update Users
 set DateofBirth='1995-05-15'
 Where userID=1;
-```sql
+```
 
 After the testing process, I deleted the data that was no longer relevant in order to preserve the database clean:
+
 
 ```sql
 -- Ștergeți toate postările utilizatorilor născuți după anul 2000
