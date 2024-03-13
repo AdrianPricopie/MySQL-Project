@@ -384,10 +384,6 @@ SELECT Comments.CommentID, CommentText, Users.Username
 FROM Comments
 INNER JOIN Users ON Comments.UserID = Users.UserID
 WHERE Comments.PostID = 1;
-
-#Adaugam un utilizator nou in tablea users
-insert into Users(Username,Email,PasswordUser,DateOfBirth)
-Values('Petrisor','Petrisor.Ionut@yahoo.com','PetrisorIon123','2002-02-01');
 ```
 ## Conclusions:
 
